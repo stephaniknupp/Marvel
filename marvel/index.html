@@ -1,18 +1,24 @@
-<html>
-    <head></head>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Marvel</title>
+        <link rel="shortcut icon" href="faviconn.ico" type="image/x-icon">
+        <link rel="icon" href="faviconn.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        
+    </head>
     <body>
-        <div id='herois'></div>
+        <div id='herois'
+        style="display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        "
+        >
+        </div>
+        <script src="js/javascript.js"></script>
     </body>
-    <script>
-        const timeStamp = '1582322163';
-        const apiKey = '6ad9cc19b9b696d322ecca4e5bf59bed';
-        const md5 = '8a90c6d544d8548a58c9020d27950b98';
-
-        fetch(`http://gateway.marvel.com/v1/public/characters?ts=${timeStamp}&apikey=${apiKey}&hash=${md5}&limit=6`
-        ).then((response) => {
-            return response.json();
-        }).then((jsonParsed) => {
-            console.log(jsonParsed);
-        })
-    </script>
+    <footer id='rodape'>
+        <p>Data provided by Marvel. © 2014 Marvel</p>
+    </footer>
 </html>
